@@ -1,5 +1,10 @@
-const removeFromArray = function() {
+const removeFromArray = function(array, ...args) {
+    const arr = [];
+    for(let item of array){
+        if(!args.includes(item)){
+            arr.push(item);
+        }
+    }
+    return arr;
 };
-
-// Do not edit below this line
 module.exports = removeFromArray;
